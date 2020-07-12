@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap');
+
+:root{
+  --sidebar-flex:1.5;
+  --condiv-flex:6;
+  --fontsize-p:1.2rem;
+  --fontsize-nav:1.6rem;
+  --typing-font:3rem;
+}
+* {
+  margin:0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Raleway';
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+
+/* .condiv class is for the right side content container*/
+.condiv {
+  padding: 100px ;
+  background-color: #d2d2d2;
+  flex:var(--condiv-flex);
+}
+
+/*--------------------
+   * HOME COntent STyLe
+---------------------
+*/
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*--------------------
+   ***** Home ImAGE STyles
+---------------------
+*/
+
+.profilepic {
+  border-radius: 50%;
+  width: 205px;
+  margin: 30px;
+  box-shadow: gray -3px/*Xaxis-left*/ -3px /* y-axis*/ 20px /* blur */;
+}
+
+/*--------------------
+   ***** Typing Effect STYLES
+---------------------
+*/
+.typingeffect
+{
+  font-size: var(--fontsize-p);
+  font-weight: 500;
+  margin-bottom: 30px  
+}
+
+/*--------------------
+   ***** NAVBAR STYLES
+---------------------
+*/
+nav {
+  padding: 60px 40px 0px 40px;
+  flex: var(--sidebar-flex);
+  background:#d2d2d2;
+  background: linear-gradient(180deg,
+    rgba(79,0,74,6) 30%,
+    rgba(144,8,8,8) 75%);
+    box-shadow: rgba(35, 35, 35,1) 2px 3px 15px;
+    z-index: 2;
+    
+
+/* Test Styles 
+    
+    background: linear-gradient(90deg,
+    rgba(79,0,74,4) 66%,
+    rgba(144,8,8,2) 66%,
+    rgba(210, 210, 210,2) 75%);
+  
+*/
+}
+
+nav ul {
+  font-size: var(--fontsize-nav);
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: white !important;
+}
+
+nav ul li {
+  margin: 40px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/*
+  -----------------------------
+    Styles for active class in Navitems
+  ------------------------------
+*/
+.active {
+  font-weight: bolder;
+}
+
+
+/*
+    ------------------------
+    Social Component styles
+    -------------------------
+*/
+
+.social {
+  position: absolute;
+  margin-top: 5%;
+  display: flex;
+  bottom: 60px;
+}
+
+.social i {
+  padding-right: 25px;
+  font-size: 2em;
+  color: #9a9b9c;   /* #9a9b9c */
+}
+
+.social i:hover {
+  color: #000;
+}
+
+
+/*
+  -----------------------------
+  About page Component Styles
+  -----------------------------
+*/
+
+.subtopic {
+  margin: 10px 10px 30px 10px !important;
+}
+
+p {
+  font-size: var(--fontsize-p);
+}
+
+h1,h2,h3,h4,p {
+  margin: 10px;
+}
+
+
+/*
+  ----------------------------
+  Widecard Component STYLES
+  ----------------------------
+*/
+
+.widecard {
+  border: 0px solid #9a9b9c;
+  display: flex;
+  margin: 30px 0px 30px 0px;
+}
+
+.widecard:hover {
+  color: #1b1d20;
+  background-color: #fff;
+  box-sizing: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px
+    rgba(0,0,0,0.23);
+}
+/*
+  ----------------------------
+  SKILLS Component STYLES
+  ----------------------------
+*/
+.skills ul li {
+  list-style-type:none;
+  margin:30px;
+}
+
+/*
+  ----------------------------
+  For Screens below 450px STYLES
+  ----------------------------
+*/
+
+@media all and (max-width: 450px) {
+  :root {
+    --fontsize-nav:1rem;
+    --sidebar-flex:0;
+    --typing-font:2rem;
+  }
+  .App {
+    flex-direction: column;
+  }
+  .sidebar {
+    padding: 30px;
+    background: rgb(238,103,143);
+    background: linear-gradient(90deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%);
+  }
+  
+  .condiv {
+    padding: 50px ;
+  }
+
+  nav ul {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 10px;
+  }
+  
+  .social {
+    left:0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    bottom: 30px;
+  }
+  
+  .social i {
+    padding-right: 0px;
+  }
+} /* END atMEDIA query */
+
